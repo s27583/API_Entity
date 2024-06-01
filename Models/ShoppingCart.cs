@@ -10,17 +10,19 @@ namespace API_Entity.Models
     [Table("Shopping_Carts")]
     public class ShoppingCart
     {
-        [Key]
-        [Column("FK_account")]
-        [ForeignKey("Account")]
-        public int AccountId { get; set; }
-        public Account Account { get; set; }
+        // [Key]
+        // [Column("FK_account")]
+        // [ForeignKey("Account")]
+        // public int AccountId { get; set; }
+        // public Account Account { get; set; }
 
         [Key]
         [Column("FK_product")]
         [ForeignKey("Product")]
         public int ProductId { get; set; }
-        public Product Product { get; set; }
+        [Column("name")]
+        public string ProductName { get; set; }
+        // public Product Product { get; set; }
         
         [Column("amount")]
         public int Amount { get; set; }

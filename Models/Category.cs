@@ -17,6 +17,6 @@ namespace API_Entity.Models
         [MaxLength(100)]
         [Column("name")]
         public string CategoryName { get; set; }
-
+        public ICollection<ProductCategory> ProductCategories { get; set; }
     }
 }
